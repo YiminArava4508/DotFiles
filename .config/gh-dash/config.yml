@@ -86,7 +86,7 @@ keybindings:
         sh -lc '
         cd "{{.RepoPath}}" &&
         gh pr checkout {{.PrNumber}} --repo {{.RepoName}} &&
-        tmux new-window -n "PR-{{.PrNumber}}" "cd {{.RepoPath}} && nvim -c \"Octo review\""
+        tmux new-window -n "PR-{{.PrNumber}}" "cd {{.RepoPath}} && nvim +\"lua vim.defer_fn(function() vim.cmd('Octo review') end, 200)\""
         '
 repoPaths:
   MatthewsREIS/gemini: /home/imbo/Work/gemini
