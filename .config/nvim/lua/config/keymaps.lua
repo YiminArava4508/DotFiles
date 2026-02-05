@@ -9,4 +9,5 @@ local function map_if_unset(mode, lhs, rhs, opts)
 end
 
 map_if_unset("n", "<leader>oc", "<cmd>Octo comment add<CR>", { desc = "Octo comment add" })
+map_if_unset("v", "<leader>oc", "<cmd>Octo comment add<CR>", { desc = "Octo comment add" })
 map_if_unset("n", "<leader>os", "<cmd>Octo review submit<CR>", { desc = "Octo review submit" })
