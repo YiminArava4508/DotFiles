@@ -86,8 +86,7 @@ keybindings:
         sh -lc '
         cd "{{.RepoPath}}" &&
         gh pr checkout {{.PrNumber}} --repo {{.RepoName}} &&
-        tmux new-window -n "PR-{{.PrNumber}}" "cd {{.RepoPath}} && nvim" \;
-        split-window -h "cd {{.RepoPath}} && lazygit"
+        tmux new-window -n "PR-{{.PrNumber}}" "cd {{.RepoPath}} && nvim"
         '
 repoPaths:
   MatthewsREIS/gemini: /home/imbo/Work/gemini
